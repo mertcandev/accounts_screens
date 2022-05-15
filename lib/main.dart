@@ -1,4 +1,4 @@
-import 'package:accounts_screens/pages/view_account1.dart';
+import 'package:accounts_screens/pages/view_account6.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
@@ -17,7 +17,7 @@ class MyApp extends StatelessWidget {
       builder: (child) {
         return const MaterialApp(
           debugShowCheckedModeBanner: false,
-          home: ViewAccount1(),
+          home: ViewAccount6(),
         );
       },
     );

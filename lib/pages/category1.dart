@@ -382,7 +382,7 @@ class _CategoryScreen1State extends State<CategoryScreen1> {
                             child: Text(
                               chooseHeader,
                               style: GoogleFonts.poppins(
-                                  fontSize: 24,
+                                  fontSize: 24.h,
                                   fontWeight: FontWeight.w500,
                                   color: kkWhiteTextColor),
                             ),

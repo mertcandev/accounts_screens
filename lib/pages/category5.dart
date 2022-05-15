@@ -405,7 +405,7 @@ class _CategoryScreen5State extends State<CategoryScreen5> {
                             child: Text(
                               "Confirm the phasing...",
                               style: GoogleFonts.poppins(
-                                  fontSize: 24,
+                                  fontSize: 24.h,
                                   fontWeight: FontWeight.w500,
                                   color: kWhiteTextColor),
                             ),

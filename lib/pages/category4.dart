@@ -419,7 +419,7 @@ class _CategoryScreen4State extends State<CategoryScreen4> {
                             child: Text(
                               "Select Center",
                               style: GoogleFonts.poppins(
-                                  fontSize: 24,
+                                  fontSize: 24.h,
                                   fontWeight: FontWeight.w500,
                                   color: kWhiteTextColor),
                             ),
