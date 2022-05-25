@@ -33,6 +33,7 @@ class _CategoryScreen6State extends State<CategoryScreen6> {
   final Color backgroundColor = const Color(0xff5BEFBD);
   final Color kWhiteTextColor = const Color(0xffFFFFFF);
   static String dragText = "Drag the on the circle to update the Budget amount";
+  
 
   @override
   Widget build(BuildContext context) {
@@ -186,7 +187,7 @@ class _CategoryScreen6State extends State<CategoryScreen6> {
                         Padding(
                           padding: EdgeInsets.only(top: 10.h, bottom: 10.h),
                           child: SizedBox(
-                            height: 381.h,
+                            height: 320.h,
                             child: Column(
                               crossAxisAlignment: CrossAxisAlignment.center,
                               children: [
@@ -206,37 +207,67 @@ class _CategoryScreen6State extends State<CategoryScreen6> {
                                   ),
                                 ),
                                 Padding(
-                                  padding: EdgeInsets.only(top: 20.h),
-                                  child: SleekCircularSlider(
-                                      innerWidget: (value) {
-                                        return Center(
-                                            child: Text(
-                                          value.floor().toString(),
-                                          style: GoogleFonts.poppins(
-                                            fontSize: 28.h,
-                                            fontWeight: FontWeight.w700,
-                                            color: const Color(0xff979C9E),
-                                          ),
-                                        ));
-                                      },
-                                      onChange: (value) {},
-                                      initialValue: 450,
-                                      min: 0,
-                                      max: 1000,
-                                      appearance: CircularSliderAppearance(
-                                          customWidths: CustomSliderWidths(
-                                              trackWidth: 20.h,
-                                              progressBarWidth: 20.h,
-                                              handlerSize: 15.h,
-                                              shadowWidth: 0),
-                                          size: 163.h,
-                                          customColors: CustomSliderColors(
-                                              progressBarColor:
-                                                  const Color(0xffFADB28),
-                                              dotColor: const Color(0xffF45655),
-                                              trackColor:
-                                                  const Color(0xffCDD0D2)
-                                                      .withOpacity(0.38)))),
+                                  padding: EdgeInsets.only(top: 25.h),
+                                  child: Stack(children: [
+                                    SleekCircularSlider(
+                                        innerWidget: (value) {
+                                          return const Center(child: Text(""));
+                                        },
+                                        onChange: (value) {},
+                                        initialValue: 300,
+                                        min: 0,
+                                        max: 1000,
+                                        appearance: CircularSliderAppearance(
+                                            counterClockwise: true,
+                                            startAngle: 180,
+                                            angleRange: 360,
+                                            customWidths: CustomSliderWidths(
+                                                trackWidth: 20.h,
+                                                progressBarWidth: 20.h,
+                                                handlerSize: 0.h,
+                                                shadowWidth: 0),
+                                            size: 163.h,
+                                            customColors: CustomSliderColors(
+                                                progressBarColor:
+                                                    const Color(0xffFE7886),
+                                                dotColor:
+                                                    const Color(0xffFADB28),
+                                                trackColor:
+                                                    const Color(0xffCDD0D2)
+                                                        .withOpacity(0.38)))),
+                                    SleekCircularSlider(
+                                        innerWidget: (value) {
+                                          return Center(
+                                              child: Text(
+                                            value.floor().toString(),
+                                            style: GoogleFonts.poppins(
+                                              fontSize: 28.h,
+                                              fontWeight: FontWeight.w700,
+                                              color: const Color(0xff979C9E),
+                                            ),
+                                          ));
+                                        },
+                                        onChange: (value) {},
+                                        initialValue: 450,
+                                        min: 0,
+                                        max: 1000,
+                                        appearance: CircularSliderAppearance(
+                                            startAngle: 180,
+                                            angleRange: 180,
+                                            customWidths: CustomSliderWidths(
+                                                trackWidth: 20.h,
+                                                progressBarWidth: 20.h,
+                                                handlerSize: 12.h,
+                                                shadowWidth: 0),
+                                            size: 163.h,
+                                            customColors: CustomSliderColors(
+                                                progressBarColor:
+                                                    const Color(0xffFADB28),
+                                                dotColor:
+                                                    const Color(0xffF45655),
+                                                trackColor:
+                                                    Colors.transparent))),
+                                  ]),
                                 ),
                                 Padding(
                                   padding: EdgeInsets.only(top: 32.h),
@@ -273,7 +304,7 @@ class _CategoryScreen6State extends State<CategoryScreen6> {
                                             decoration: BoxDecoration(
                                               borderRadius:
                                                   BorderRadius.circular(4.sp),
-                                              color: const Color(0xffF45655),
+                                              color: const Color(0xffFE7886),
                                             ),
                                           ),
                                           SizedBox(width: 8.w),
@@ -297,15 +328,12 @@ class _CategoryScreen6State extends State<CategoryScreen6> {
                     ),
                   ),
                 ),
-                SizedBox(
-                  height: 30.h,
-                ),
                 Column(
                   children: [
                     GestureDetector(
                       child: Padding(
                         padding: EdgeInsets.only(
-                            left: 18.w, right: 18.w, bottom: 8.h),
+                            left: 18.w, right: 18.w, bottom: 8.h, top: 15.w),
                         child: Container(
                           height: 48.h,
                           decoration: BoxDecoration(
